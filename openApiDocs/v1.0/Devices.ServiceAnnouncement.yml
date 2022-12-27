@@ -45,7 +45,7 @@ paths:
                 - messages
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -67,12 +67,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.serviceAnnouncement'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.serviceAnnouncement'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -156,7 +152,7 @@ paths:
                 - issues
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.serviceHealthCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -177,7 +173,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.serviceHealth'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -231,7 +227,7 @@ paths:
                 - issues
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -262,12 +258,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.serviceHealth'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.serviceHealth'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -398,7 +390,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.serviceHealthIssueCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -428,7 +420,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.serviceHealthIssue'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -500,7 +492,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -539,12 +531,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.serviceHealthIssue'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.serviceHealthIssue'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -606,7 +594,7 @@ paths:
             type: string
           x-ms-docs-key-type: serviceHealthIssue
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/octet-stream:
@@ -718,7 +706,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.serviceHealthIssueCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -739,7 +727,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.serviceHealthIssue'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -803,7 +791,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -834,12 +822,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.serviceHealthIssue'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.serviceHealthIssue'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -885,7 +869,7 @@ paths:
             type: string
           x-ms-docs-key-type: serviceHealthIssue
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/octet-stream:
@@ -1002,7 +986,7 @@ paths:
                 - attachments
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.serviceUpdateMessageCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -1023,7 +1007,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.serviceUpdateMessage'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -1090,7 +1074,7 @@ paths:
                 - attachments
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -1121,12 +1105,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.serviceUpdateMessage'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.serviceUpdateMessage'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -1233,7 +1213,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.serviceAnnouncementAttachmentCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -1263,7 +1243,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.serviceAnnouncementAttachment'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -1326,7 +1306,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -1365,12 +1345,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.serviceAnnouncementAttachment'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.serviceAnnouncementAttachment'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -1436,7 +1412,7 @@ paths:
             type: string
           x-ms-docs-key-type: serviceAnnouncementAttachment
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -1503,7 +1479,7 @@ paths:
             type: string
           x-ms-docs-key-type: serviceUpdateMessage
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -1568,7 +1544,7 @@ paths:
                 type: object
         required: true
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -1610,7 +1586,7 @@ paths:
                 type: object
         required: true
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -1652,7 +1628,7 @@ paths:
                 type: object
         required: true
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -1694,7 +1670,7 @@ paths:
                 type: object
         required: true
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -1736,7 +1712,7 @@ paths:
                 type: object
         required: true
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -1778,7 +1754,7 @@ paths:
                 type: object
         required: true
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:

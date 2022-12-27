@@ -58,7 +58,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -89,12 +89,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenote'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.onenote'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -226,7 +222,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.notebookCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -260,7 +256,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.notebook'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -334,7 +330,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -373,12 +369,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.notebook'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.notebook'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -518,7 +510,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.sectionGroupCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -560,7 +552,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.sectionGroup'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -642,7 +634,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -689,12 +681,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.sectionGroup'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.sectionGroup'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -813,7 +801,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -895,7 +883,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -1014,7 +1002,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.sectionGroupCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -1103,7 +1091,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -1223,7 +1211,7 @@ paths:
                 - parentSectionGroup
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.onenoteSectionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -1273,7 +1261,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenoteSection'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -1362,7 +1350,7 @@ paths:
                 - parentSectionGroup
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -1417,12 +1405,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenoteSection'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.onenoteSection'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -1596,7 +1580,7 @@ paths:
                 - parentSection
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.onenotePageCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -1650,7 +1634,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenotePage'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -1747,7 +1731,7 @@ paths:
                 - parentSection
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -1810,12 +1794,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenotePage'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.onenotePage'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -1926,7 +1906,7 @@ paths:
             type: string
           x-ms-docs-key-type: onenotePage
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -2086,7 +2066,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -2183,7 +2163,7 @@ paths:
                 - parentSectionGroup
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -2273,7 +2253,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -2363,7 +2343,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -2475,7 +2455,7 @@ paths:
                 - parentSectionGroup
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.onenoteSectionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -2517,7 +2497,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenoteSection'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -2598,7 +2578,7 @@ paths:
                 - parentSectionGroup
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -2645,12 +2625,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenoteSection'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.onenoteSection'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -2808,7 +2784,7 @@ paths:
                 - parentSection
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.onenotePageCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -2854,7 +2830,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenotePage'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -2943,7 +2919,7 @@ paths:
                 - parentSection
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -2998,12 +2974,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenotePage'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.onenotePage'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -3098,7 +3070,7 @@ paths:
             type: string
           x-ms-docs-key-type: onenotePage
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -3242,7 +3214,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -3331,7 +3303,7 @@ paths:
                 - parentSectionGroup
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -3413,7 +3385,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -3495,7 +3467,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -3584,7 +3556,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.onenoteOperationCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -3614,7 +3586,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenoteOperation'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -3679,7 +3651,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -3718,12 +3690,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenoteOperation'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.onenoteOperation'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -3857,7 +3825,7 @@ paths:
                 - parentSection
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.onenotePageCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -3887,7 +3855,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenotePage'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -3960,7 +3928,7 @@ paths:
                 - parentSection
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -3999,12 +3967,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenotePage'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.onenotePage'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -4067,7 +4031,7 @@ paths:
             type: string
           x-ms-docs-key-type: onenotePage
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -4179,7 +4143,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -4252,7 +4216,7 @@ paths:
                 - parentSectionGroup
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -4329,7 +4293,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.onenoteResourceCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -4359,7 +4323,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenoteResource'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -4420,7 +4384,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -4459,12 +4423,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenoteResource'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.onenoteResource'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -4527,7 +4487,7 @@ paths:
             type: string
           x-ms-docs-key-type: onenoteResource
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -4668,7 +4628,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.sectionGroupCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -4698,7 +4658,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.sectionGroup'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -4772,7 +4732,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -4811,12 +4771,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.sectionGroup'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.sectionGroup'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -4919,7 +4875,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -4993,7 +4949,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -5104,7 +5060,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.sectionGroupCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -5185,7 +5141,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -5297,7 +5253,7 @@ paths:
                 - parentSectionGroup
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.onenoteSectionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -5339,7 +5295,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenoteSection'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -5420,7 +5376,7 @@ paths:
                 - parentSectionGroup
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -5467,12 +5423,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenoteSection'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.onenoteSection'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -5630,7 +5582,7 @@ paths:
                 - parentSection
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.onenotePageCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -5676,7 +5628,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenotePage'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -5765,7 +5717,7 @@ paths:
                 - parentSection
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -5820,12 +5772,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenotePage'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.onenotePage'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -5920,7 +5868,7 @@ paths:
             type: string
           x-ms-docs-key-type: onenotePage
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -6064,7 +6012,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -6153,7 +6101,7 @@ paths:
                 - parentSectionGroup
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -6235,7 +6183,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -6317,7 +6265,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -6421,7 +6369,7 @@ paths:
                 - parentSectionGroup
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.onenoteSectionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -6451,7 +6399,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenoteSection'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -6524,7 +6472,7 @@ paths:
                 - parentSectionGroup
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -6563,12 +6511,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenoteSection'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.onenoteSection'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -6710,7 +6654,7 @@ paths:
                 - parentSection
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.onenotePageCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -6748,7 +6692,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenotePage'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -6829,7 +6773,7 @@ paths:
                 - parentSection
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -6876,12 +6820,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenotePage'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.onenotePage'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -6960,7 +6900,7 @@ paths:
             type: string
           x-ms-docs-key-type: onenotePage
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -7088,7 +7028,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -7169,7 +7109,7 @@ paths:
                 - parentSectionGroup
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -7243,7 +7183,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -7317,7 +7257,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -7379,7 +7319,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -7410,12 +7350,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenote'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.onenote'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -7547,7 +7483,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.notebookCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -7581,7 +7517,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.notebook'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -7655,7 +7591,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -7694,12 +7630,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.notebook'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.notebook'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -7839,7 +7771,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.sectionGroupCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -7881,7 +7813,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.sectionGroup'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -7963,7 +7895,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -8010,12 +7942,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.sectionGroup'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.sectionGroup'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -8134,7 +8062,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -8216,7 +8144,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -8335,7 +8263,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.sectionGroupCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -8424,7 +8352,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -8544,7 +8472,7 @@ paths:
                 - parentSectionGroup
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.onenoteSectionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -8594,7 +8522,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenoteSection'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -8683,7 +8611,7 @@ paths:
                 - parentSectionGroup
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -8738,12 +8666,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenoteSection'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.onenoteSection'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -8917,7 +8841,7 @@ paths:
                 - parentSection
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.onenotePageCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -8971,7 +8895,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenotePage'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -9068,7 +8992,7 @@ paths:
                 - parentSection
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -9131,12 +9055,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenotePage'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.onenotePage'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -9247,7 +9167,7 @@ paths:
             type: string
           x-ms-docs-key-type: onenotePage
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -9407,7 +9327,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -9504,7 +9424,7 @@ paths:
                 - parentSectionGroup
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -9594,7 +9514,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -9684,7 +9604,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -9796,7 +9716,7 @@ paths:
                 - parentSectionGroup
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.onenoteSectionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -9838,7 +9758,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenoteSection'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -9919,7 +9839,7 @@ paths:
                 - parentSectionGroup
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -9966,12 +9886,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenoteSection'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.onenoteSection'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -10129,7 +10045,7 @@ paths:
                 - parentSection
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.onenotePageCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -10175,7 +10091,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenotePage'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -10264,7 +10180,7 @@ paths:
                 - parentSection
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -10319,12 +10235,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenotePage'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.onenotePage'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -10419,7 +10331,7 @@ paths:
             type: string
           x-ms-docs-key-type: onenotePage
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -10563,7 +10475,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -10652,7 +10564,7 @@ paths:
                 - parentSectionGroup
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -10734,7 +10646,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -10816,7 +10728,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -10905,7 +10817,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.onenoteOperationCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -10935,7 +10847,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenoteOperation'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -11000,7 +10912,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -11039,12 +10951,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenoteOperation'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.onenoteOperation'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -11178,7 +11086,7 @@ paths:
                 - parentSection
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.onenotePageCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -11208,7 +11116,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenotePage'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -11281,7 +11189,7 @@ paths:
                 - parentSection
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -11320,12 +11228,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenotePage'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.onenotePage'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -11388,7 +11292,7 @@ paths:
             type: string
           x-ms-docs-key-type: onenotePage
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -11500,7 +11404,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -11573,7 +11477,7 @@ paths:
                 - parentSectionGroup
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -11650,7 +11554,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.onenoteResourceCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -11680,7 +11584,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenoteResource'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -11741,7 +11645,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -11780,12 +11684,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenoteResource'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.onenoteResource'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -11848,7 +11748,7 @@ paths:
             type: string
           x-ms-docs-key-type: onenoteResource
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -11989,7 +11889,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.sectionGroupCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -12019,7 +11919,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.sectionGroup'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -12093,7 +11993,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -12132,12 +12032,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.sectionGroup'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.sectionGroup'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -12240,7 +12136,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -12314,7 +12210,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -12425,7 +12321,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.sectionGroupCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -12506,7 +12402,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -12618,7 +12514,7 @@ paths:
                 - parentSectionGroup
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.onenoteSectionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -12660,7 +12556,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenoteSection'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -12741,7 +12637,7 @@ paths:
                 - parentSectionGroup
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -12788,12 +12684,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenoteSection'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.onenoteSection'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -12951,7 +12843,7 @@ paths:
                 - parentSection
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.onenotePageCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -12997,7 +12889,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenotePage'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -13086,7 +12978,7 @@ paths:
                 - parentSection
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -13141,12 +13033,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenotePage'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.onenotePage'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -13241,7 +13129,7 @@ paths:
             type: string
           x-ms-docs-key-type: onenotePage
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -13385,7 +13273,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -13474,7 +13362,7 @@ paths:
                 - parentSectionGroup
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -13556,7 +13444,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -13638,7 +13526,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -13742,7 +13630,7 @@ paths:
                 - parentSectionGroup
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.onenoteSectionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -13772,7 +13660,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenoteSection'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -13845,7 +13733,7 @@ paths:
                 - parentSectionGroup
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -13884,12 +13772,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenoteSection'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.onenoteSection'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -14031,7 +13915,7 @@ paths:
                 - parentSection
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.onenotePageCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -14069,7 +13953,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenotePage'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -14150,7 +14034,7 @@ paths:
                 - parentSection
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -14197,12 +14081,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenotePage'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.onenotePage'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -14281,7 +14161,7 @@ paths:
             type: string
           x-ms-docs-key-type: onenotePage
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -14409,7 +14289,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -14490,7 +14370,7 @@ paths:
                 - parentSectionGroup
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -14564,7 +14444,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -14638,7 +14518,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -14699,7 +14579,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -14730,12 +14610,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenote'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.onenote'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -14867,7 +14743,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.notebookCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -14901,7 +14777,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.notebook'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -14975,7 +14851,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -15014,12 +14890,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.notebook'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.notebook'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -15159,7 +15031,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.sectionGroupCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -15201,7 +15073,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.sectionGroup'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -15283,7 +15155,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -15330,12 +15202,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.sectionGroup'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.sectionGroup'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -15454,7 +15322,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -15536,7 +15404,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -15655,7 +15523,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.sectionGroupCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -15744,7 +15612,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -15864,7 +15732,7 @@ paths:
                 - parentSectionGroup
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.onenoteSectionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -15914,7 +15782,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenoteSection'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -16003,7 +15871,7 @@ paths:
                 - parentSectionGroup
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -16058,12 +15926,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenoteSection'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.onenoteSection'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -16237,7 +16101,7 @@ paths:
                 - parentSection
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.onenotePageCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -16291,7 +16155,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenotePage'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -16388,7 +16252,7 @@ paths:
                 - parentSection
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -16451,12 +16315,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenotePage'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.onenotePage'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -16567,7 +16427,7 @@ paths:
             type: string
           x-ms-docs-key-type: onenotePage
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -16727,7 +16587,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -16824,7 +16684,7 @@ paths:
                 - parentSectionGroup
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -16914,7 +16774,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -17004,7 +16864,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -17116,7 +16976,7 @@ paths:
                 - parentSectionGroup
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.onenoteSectionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -17158,7 +17018,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenoteSection'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -17239,7 +17099,7 @@ paths:
                 - parentSectionGroup
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -17286,12 +17146,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenoteSection'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.onenoteSection'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -17449,7 +17305,7 @@ paths:
                 - parentSection
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.onenotePageCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -17495,7 +17351,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenotePage'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -17584,7 +17440,7 @@ paths:
                 - parentSection
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -17639,12 +17495,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenotePage'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.onenotePage'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -17739,7 +17591,7 @@ paths:
             type: string
           x-ms-docs-key-type: onenotePage
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -17883,7 +17735,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -17972,7 +17824,7 @@ paths:
                 - parentSectionGroup
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -18054,7 +17906,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -18136,7 +17988,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -18225,7 +18077,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.onenoteOperationCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -18255,7 +18107,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenoteOperation'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -18320,7 +18172,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -18359,12 +18211,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenoteOperation'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.onenoteOperation'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -18498,7 +18346,7 @@ paths:
                 - parentSection
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.onenotePageCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -18528,7 +18376,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenotePage'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -18601,7 +18449,7 @@ paths:
                 - parentSection
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -18640,12 +18488,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenotePage'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.onenotePage'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -18708,7 +18552,7 @@ paths:
             type: string
           x-ms-docs-key-type: onenotePage
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -18820,7 +18664,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -18893,7 +18737,7 @@ paths:
                 - parentSectionGroup
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -18970,7 +18814,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.onenoteResourceCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -19000,7 +18844,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenoteResource'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -19061,7 +18905,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -19100,12 +18944,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenoteResource'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.onenoteResource'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -19168,7 +19008,7 @@ paths:
             type: string
           x-ms-docs-key-type: onenoteResource
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -19309,7 +19149,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.sectionGroupCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -19339,7 +19179,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.sectionGroup'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -19413,7 +19253,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -19452,12 +19292,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.sectionGroup'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.sectionGroup'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -19560,7 +19396,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -19634,7 +19470,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -19745,7 +19581,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.sectionGroupCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -19826,7 +19662,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -19938,7 +19774,7 @@ paths:
                 - parentSectionGroup
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.onenoteSectionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -19980,7 +19816,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenoteSection'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -20061,7 +19897,7 @@ paths:
                 - parentSectionGroup
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -20108,12 +19944,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenoteSection'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.onenoteSection'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -20271,7 +20103,7 @@ paths:
                 - parentSection
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.onenotePageCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -20317,7 +20149,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenotePage'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -20406,7 +20238,7 @@ paths:
                 - parentSection
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -20461,12 +20293,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenotePage'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.onenotePage'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -20561,7 +20389,7 @@ paths:
             type: string
           x-ms-docs-key-type: onenotePage
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -20705,7 +20533,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -20794,7 +20622,7 @@ paths:
                 - parentSectionGroup
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -20876,7 +20704,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -20958,7 +20786,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -21062,7 +20890,7 @@ paths:
                 - parentSectionGroup
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.onenoteSectionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -21092,7 +20920,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenoteSection'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -21165,7 +20993,7 @@ paths:
                 - parentSectionGroup
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -21204,12 +21032,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenoteSection'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.onenoteSection'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -21351,7 +21175,7 @@ paths:
                 - parentSection
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.onenotePageCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -21389,7 +21213,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenotePage'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -21470,7 +21294,7 @@ paths:
                 - parentSection
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -21517,12 +21341,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.onenotePage'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.onenotePage'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -21601,7 +21421,7 @@ paths:
             type: string
           x-ms-docs-key-type: onenotePage
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -21729,7 +21549,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -21810,7 +21630,7 @@ paths:
                 - parentSectionGroup
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -21884,7 +21704,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -21958,7 +21778,7 @@ paths:
                 - sections
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:

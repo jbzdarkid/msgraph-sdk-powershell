@@ -115,7 +115,7 @@ paths:
                 - special
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.driveCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -136,7 +136,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.drive'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created entity
           content:
             application/json:
@@ -154,7 +154,7 @@ paths:
       externalDocs:
         description: Find more info here
         url: https://docs.microsoft.com/graph/api/drive-get?view=graph-rest-1.0
-      operationId: drives.drive_GetDrive
+      operationId: drives.drive_GetDriveGraphBPreId
       parameters:
         - name: drive-id
           in: path
@@ -219,7 +219,7 @@ paths:
                 - special
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved entity
           content:
             application/json:
@@ -231,8 +231,8 @@ paths:
     patch:
       tags:
         - drives.drive
-      summary: Update entity in drives
-      operationId: drives.drive_UpdateDrive
+      summary: Update entity in drives by key (id)
+      operationId: drives.drive_UpdateDriveGraphBPreId
       parameters:
         - name: drive-id
           in: path
@@ -250,20 +250,16 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.drive'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.drive'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
     delete:
       tags:
         - drives.drive
-      summary: Delete entity from drives
-      operationId: drives.drive_DeleteDrive
+      summary: Delete entity from drives by key (id)
+      operationId: drives.drive_DeleteDriveGraphBPreId
       parameters:
         - name: drive-id
           in: path
@@ -466,7 +462,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.driveItemCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -576,7 +572,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -613,7 +609,7 @@ paths:
             type: string
           x-ms-docs-key-type: driveItem
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -841,7 +837,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.driveItemCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -951,7 +947,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -988,7 +984,7 @@ paths:
             type: string
           x-ms-docs-key-type: driveItem
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -1213,7 +1209,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.driveItemCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -1243,7 +1239,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.driveItem'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -1354,7 +1350,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -1393,12 +1389,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.driveItem'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.driveItem'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -1491,7 +1483,7 @@ paths:
                 - lastSevenDays
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -1689,7 +1681,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.driveItemCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -1807,7 +1799,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -1852,7 +1844,7 @@ paths:
             type: string
           x-ms-docs-key-type: driveItem
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -1932,7 +1924,7 @@ paths:
             type: string
           x-ms-docs-key-type: driveItem
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -2053,7 +2045,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -2092,12 +2084,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.listItem'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.listItem'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -2190,7 +2178,7 @@ paths:
                 - lastSevenDays
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -2295,7 +2283,7 @@ paths:
                 - fields
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.documentSetVersionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -2337,7 +2325,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.documentSetVersion'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -2413,7 +2401,7 @@ paths:
                 - fields
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -2460,12 +2448,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.documentSetVersion'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.documentSetVersion'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -2654,7 +2638,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -2688,7 +2672,7 @@ paths:
             type: string
           x-ms-docs-key-type: driveItem
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -2784,7 +2768,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -2827,12 +2811,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.fieldValueSet'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.fieldValueSet'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -2952,7 +2932,7 @@ paths:
                 - startDateTime desc
               type: string
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -3081,7 +3061,7 @@ paths:
                 - startDateTime desc
               type: string
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -3185,7 +3165,7 @@ paths:
                 - fields
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.listItemVersionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -3223,7 +3203,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.listItemVersion'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -3294,7 +3274,7 @@ paths:
                 - fields
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -3341,12 +3321,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.listItemVersion'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.listItemVersion'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -3449,7 +3425,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -3496,12 +3472,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.fieldValueSet'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.fieldValueSet'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -3547,6 +3519,47 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
+  '/drives/{drive-id}/items/{driveItem-id}/listItem/versions/{listItemVersion-id}/microsoft.graph.documentSetVersion/microsoft.graph.restore':
+    post:
+      tags:
+        - drives.Actions
+      summary: Invoke action restore
+      description: Restore a document set version.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/documentsetversion-restore?view=graph-rest-1.0
+      operationId: drives.items.listItem.versions.AsDocumentSetVersion_restore
+      parameters:
+        - name: drive-id
+          in: path
+          description: 'key: id of drive'
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: drive
+        - name: driveItem-id
+          in: path
+          description: 'key: id of driveItem'
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: driveItem
+        - name: listItemVersion-id
+          in: path
+          description: 'key: id of listItemVersion'
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: listItemVersion
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
   '/drives/{drive-id}/items/{driveItem-id}/listItem/versions/{listItemVersion-id}/microsoft.graph.restoreVersion':
     post:
       tags:
@@ -3713,7 +3726,7 @@ paths:
                 type: object
         required: true
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -3780,7 +3793,7 @@ paths:
                 type: object
         required: true
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -3829,7 +3842,7 @@ paths:
                 type: object
         required: true
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -4001,7 +4014,7 @@ paths:
                 - webDavUrl desc
               type: string
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -4198,7 +4211,7 @@ paths:
                 - webDavUrl desc
               type: string
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -4252,7 +4265,7 @@ paths:
             type: string
           x-ms-docs-key-type: driveItem
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -4343,7 +4356,7 @@ paths:
                 - startDateTime desc
               type: string
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -4472,7 +4485,7 @@ paths:
                 - startDateTime desc
               type: string
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -4563,7 +4576,7 @@ paths:
                 type: object
         required: true
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -4627,7 +4640,7 @@ paths:
                 type: object
         required: true
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -4679,7 +4692,7 @@ paths:
                 type: object
         required: true
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -4859,7 +4872,7 @@ paths:
                 - webDavUrl desc
               type: string
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -5062,7 +5075,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.permissionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -5100,7 +5113,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.permission'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -5177,7 +5190,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -5224,12 +5237,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.permission'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.permission'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -5330,7 +5339,7 @@ paths:
                 type: object
         required: true
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -5462,7 +5471,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.subscriptionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -5500,7 +5509,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.subscription'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -5580,7 +5589,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -5627,12 +5636,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.subscription'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.subscription'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -5797,7 +5802,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.thumbnailSetCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -5835,7 +5840,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.thumbnailSet'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -5905,7 +5910,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -5952,12 +5957,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.thumbnailSet'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.thumbnailSet'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -6088,7 +6089,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.driveItemVersionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -6126,7 +6127,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.driveItemVersion'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -6197,7 +6198,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -6244,12 +6245,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.driveItemVersion'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.driveItemVersion'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -6331,7 +6328,7 @@ paths:
             type: string
           x-ms-docs-key-type: driveItemVersion
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -6497,7 +6494,7 @@ paths:
                 - subscriptions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -6528,12 +6525,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.list'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.list'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -6720,7 +6713,7 @@ paths:
                 - sourceColumn
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.columnDefinitionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -6754,7 +6747,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.columnDefinition'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -6845,7 +6838,7 @@ paths:
                 - sourceColumn
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -6884,12 +6877,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.columnDefinition'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.columnDefinition'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -7009,7 +6998,7 @@ paths:
                 - sourceColumn
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -7132,7 +7121,7 @@ paths:
                 - columns
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.contentTypeCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -7162,7 +7151,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.contentType'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -7244,7 +7233,7 @@ paths:
                 - columns
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -7283,12 +7272,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.contentType'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.contentType'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -7399,7 +7384,7 @@ paths:
                 - columns
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -7527,7 +7512,7 @@ paths:
                 - columns
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.contentTypeCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -7616,7 +7601,7 @@ paths:
                 - columns
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -7695,7 +7680,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.columnLinkCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -7733,7 +7718,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.columnLink'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -7800,7 +7785,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -7847,12 +7832,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.columnLink'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.columnLink'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -8060,7 +8041,7 @@ paths:
                 - sourceColumn
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.columnDefinitionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -8158,7 +8139,7 @@ paths:
                 - sourceColumn
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -8332,7 +8313,7 @@ paths:
                 - sourceColumn
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.columnDefinitionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -8374,7 +8355,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.columnDefinition'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -8473,7 +8454,7 @@ paths:
                 - sourceColumn
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -8520,12 +8501,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.columnDefinition'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.columnDefinition'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -8661,7 +8638,7 @@ paths:
                 - sourceColumn
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -8793,7 +8770,7 @@ paths:
             type: string
           x-ms-docs-key-type: contentType
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -8906,7 +8883,7 @@ paths:
                 type: object
         required: true
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -8947,7 +8924,7 @@ paths:
                 type: object
         required: true
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -9049,7 +9026,7 @@ paths:
                 - sealed desc
               type: string
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -9143,7 +9120,7 @@ paths:
                 - special
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -9261,7 +9238,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.listItemCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -9295,7 +9272,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.listItem'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -9378,7 +9355,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -9417,12 +9394,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.listItem'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.listItem'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -9515,7 +9488,7 @@ paths:
                 - lastSevenDays
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -9620,7 +9593,7 @@ paths:
                 - fields
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.documentSetVersionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -9662,7 +9635,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.documentSetVersion'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -9738,7 +9711,7 @@ paths:
                 - fields
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -9785,12 +9758,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.documentSetVersion'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.documentSetVersion'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -9979,7 +9948,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -10013,7 +9982,7 @@ paths:
             type: string
           x-ms-docs-key-type: listItem
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -10109,7 +10078,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -10152,12 +10121,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.fieldValueSet'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.fieldValueSet'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -10277,7 +10242,7 @@ paths:
                 - startDateTime desc
               type: string
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -10406,7 +10371,7 @@ paths:
                 - startDateTime desc
               type: string
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -10510,7 +10475,7 @@ paths:
                 - fields
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.listItemVersionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -10548,7 +10513,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.listItemVersion'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -10619,7 +10584,7 @@ paths:
                 - fields
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -10666,12 +10631,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.listItemVersion'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.listItemVersion'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -10774,7 +10735,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -10821,12 +10782,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.fieldValueSet'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.fieldValueSet'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -10872,6 +10829,47 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
+  '/drives/{drive-id}/list/items/{listItem-id}/versions/{listItemVersion-id}/microsoft.graph.documentSetVersion/microsoft.graph.restore':
+    post:
+      tags:
+        - drives.Actions
+      summary: Invoke action restore
+      description: Restore a document set version.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/documentsetversion-restore?view=graph-rest-1.0
+      operationId: drives.list.items.versions.AsDocumentSetVersion_restore
+      parameters:
+        - name: drive-id
+          in: path
+          description: 'key: id of drive'
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: drive
+        - name: listItem-id
+          in: path
+          description: 'key: id of listItem'
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: listItem
+        - name: listItemVersion-id
+          in: path
+          description: 'key: id of listItemVersion'
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: listItemVersion
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
   '/drives/{drive-id}/list/items/{listItem-id}/versions/{listItemVersion-id}/microsoft.graph.restoreVersion':
     post:
       tags:
@@ -10999,7 +10997,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.richLongRunningOperationCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -11029,7 +11027,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.richLongRunningOperation'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -11096,7 +11094,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -11135,12 +11133,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.richLongRunningOperation'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.richLongRunningOperation'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -11279,7 +11273,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.subscriptionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -11309,7 +11303,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.subscription'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -11381,7 +11375,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -11420,12 +11414,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.subscription'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.subscription'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -11647,7 +11637,7 @@ paths:
                 - webDavUrl desc
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/recentResponse'
         default:
           $ref: '#/components/responses/error'
@@ -11818,7 +11808,7 @@ paths:
                 - webDavUrl desc
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/searchResponse'
         default:
           $ref: '#/components/responses/error'
@@ -11981,7 +11971,7 @@ paths:
                 - webDavUrl desc
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/sharedWithMeResponse'
         default:
           $ref: '#/components/responses/error'
@@ -12086,7 +12076,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -12117,12 +12107,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.driveItem'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.driveItem'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -12199,7 +12185,7 @@ paths:
                 - lastSevenDays
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -12389,7 +12375,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.driveItemCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -12499,7 +12485,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -12536,7 +12522,7 @@ paths:
             type: string
           x-ms-docs-key-type: driveItem
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -12603,7 +12589,7 @@ paths:
             type: string
           x-ms-docs-key-type: drive
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -12708,7 +12694,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -12739,12 +12725,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.listItem'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.listItem'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -12821,7 +12803,7 @@ paths:
                 - lastSevenDays
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -12918,7 +12900,7 @@ paths:
                 - fields
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.documentSetVersionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -12952,7 +12934,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.documentSetVersion'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -13020,7 +13002,7 @@ paths:
                 - fields
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -13059,12 +13041,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.documentSetVersion'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.documentSetVersion'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -13229,7 +13207,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -13255,7 +13233,7 @@ paths:
             type: string
           x-ms-docs-key-type: drive
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -13335,7 +13313,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -13370,12 +13348,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.fieldValueSet'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.fieldValueSet'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -13479,7 +13453,7 @@ paths:
                 - startDateTime desc
               type: string
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -13600,7 +13574,7 @@ paths:
                 - startDateTime desc
               type: string
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -13696,7 +13670,7 @@ paths:
                 - fields
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.listItemVersionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -13726,7 +13700,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.listItemVersion'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -13789,7 +13763,7 @@ paths:
                 - fields
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -13828,12 +13802,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.listItemVersion'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.listItemVersion'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -13920,7 +13890,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -13959,12 +13929,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.fieldValueSet'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.fieldValueSet'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -14002,6 +13968,39 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
+  '/drives/{drive-id}/root/listItem/versions/{listItemVersion-id}/microsoft.graph.documentSetVersion/microsoft.graph.restore':
+    post:
+      tags:
+        - drives.Actions
+      summary: Invoke action restore
+      description: Restore a document set version.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/documentsetversion-restore?view=graph-rest-1.0
+      operationId: drives.root.listItem.versions.AsDocumentSetVersion_restore
+      parameters:
+        - name: drive-id
+          in: path
+          description: 'key: id of drive'
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: drive
+        - name: listItemVersion-id
+          in: path
+          description: 'key: id of listItemVersion'
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: listItemVersion
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
   '/drives/{drive-id}/root/listItem/versions/{listItemVersion-id}/microsoft.graph.restoreVersion':
     post:
       tags:
@@ -14136,7 +14135,7 @@ paths:
                 type: object
         required: true
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -14195,7 +14194,7 @@ paths:
                 type: object
         required: true
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -14236,7 +14235,7 @@ paths:
                 type: object
         required: true
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -14400,7 +14399,7 @@ paths:
                 - webDavUrl desc
               type: string
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -14589,7 +14588,7 @@ paths:
                 - webDavUrl desc
               type: string
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -14635,7 +14634,7 @@ paths:
             type: string
           x-ms-docs-key-type: drive
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -14718,7 +14717,7 @@ paths:
                 - startDateTime desc
               type: string
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -14839,7 +14838,7 @@ paths:
                 - startDateTime desc
               type: string
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -14922,7 +14921,7 @@ paths:
                 type: object
         required: true
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -14978,7 +14977,7 @@ paths:
                 type: object
         required: true
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -15022,7 +15021,7 @@ paths:
                 type: object
         required: true
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -15194,7 +15193,7 @@ paths:
                 - webDavUrl desc
               type: string
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -15373,7 +15372,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.permissionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -15403,7 +15402,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.permission'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -15472,7 +15471,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -15511,12 +15510,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.permission'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.permission'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -15601,7 +15596,7 @@ paths:
                 type: object
         required: true
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -15725,7 +15720,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.subscriptionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -15755,7 +15750,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.subscription'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -15827,7 +15822,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -15866,12 +15861,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.subscription'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.subscription'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -16012,7 +16003,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.thumbnailSetCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -16042,7 +16033,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.thumbnailSet'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -16104,7 +16095,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -16143,12 +16134,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.thumbnailSet'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.thumbnailSet'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -16263,7 +16250,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.driveItemVersionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -16293,7 +16280,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.driveItemVersion'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -16356,7 +16343,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -16395,12 +16382,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.driveItemVersion'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.driveItemVersion'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -16466,7 +16449,7 @@ paths:
             type: string
           x-ms-docs-key-type: driveItemVersion
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -16724,7 +16707,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.driveItemCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -16834,7 +16817,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -16868,7 +16851,7 @@ paths:
             type: string
           x-ms-docs-key-type: driveItem
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -16989,7 +16972,7 @@ paths:
                 - special
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -17118,7 +17101,7 @@ paths:
                 - special
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.driveCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -17148,7 +17131,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.drive'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -17236,7 +17219,7 @@ paths:
                 - special
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -17275,12 +17258,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.drive'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.drive'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -17507,7 +17486,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.driveItemCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -17625,7 +17604,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -17670,7 +17649,7 @@ paths:
             type: string
           x-ms-docs-key-type: driveItem
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -17914,7 +17893,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.driveItemCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -18032,7 +18011,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -18077,7 +18056,7 @@ paths:
             type: string
           x-ms-docs-key-type: driveItem
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -18318,7 +18297,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.driveItemCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -18356,7 +18335,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.driveItem'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -18475,7 +18454,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -18522,12 +18501,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.driveItem'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.driveItem'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -18636,7 +18611,7 @@ paths:
                 - lastSevenDays
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -18842,7 +18817,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.driveItemCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -18968,7 +18943,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -19021,7 +18996,7 @@ paths:
             type: string
           x-ms-docs-key-type: driveItem
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -19117,7 +19092,7 @@ paths:
             type: string
           x-ms-docs-key-type: driveItem
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -19254,7 +19229,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -19301,12 +19276,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.listItem'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.listItem'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -19415,7 +19386,7 @@ paths:
                 - lastSevenDays
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -19528,7 +19499,7 @@ paths:
                 - fields
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.documentSetVersionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -19578,7 +19549,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.documentSetVersion'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -19662,7 +19633,7 @@ paths:
                 - fields
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -19717,12 +19688,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.documentSetVersion'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.documentSetVersion'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -19886,7 +19853,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -19928,7 +19895,7 @@ paths:
             type: string
           x-ms-docs-key-type: driveItem
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -20040,7 +20007,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -20091,12 +20058,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.fieldValueSet'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.fieldValueSet'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -20231,7 +20194,7 @@ paths:
                 - fields
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.listItemVersionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -20277,7 +20240,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.listItemVersion'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -20356,7 +20319,7 @@ paths:
                 - fields
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -20411,12 +20374,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.listItemVersion'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.listItemVersion'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -20535,7 +20494,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -20590,12 +20549,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.fieldValueSet'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.fieldValueSet'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -20760,7 +20715,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.permissionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -20806,7 +20761,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.permission'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -20891,7 +20846,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -20946,12 +20901,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.permission'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.permission'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -21122,7 +21073,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.subscriptionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -21168,7 +21119,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.subscription'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -21256,7 +21207,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -21311,12 +21262,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.subscription'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.subscription'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -21460,7 +21407,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.thumbnailSetCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -21506,7 +21453,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.thumbnailSet'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -21584,7 +21531,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -21639,12 +21586,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.thumbnailSet'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.thumbnailSet'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -21791,7 +21734,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.driveItemVersionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -21837,7 +21780,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.driveItemVersion'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -21916,7 +21859,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -21971,12 +21914,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.driveItemVersion'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.driveItemVersion'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -22074,7 +22013,7 @@ paths:
             type: string
           x-ms-docs-key-type: driveItemVersion
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -22215,7 +22154,7 @@ paths:
                 - subscriptions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -22254,12 +22193,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.list'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.list'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -22462,7 +22397,7 @@ paths:
                 - sourceColumn
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.columnDefinitionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -22504,7 +22439,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.columnDefinition'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -22603,7 +22538,7 @@ paths:
                 - sourceColumn
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -22650,12 +22585,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.columnDefinition'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.columnDefinition'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -22791,7 +22722,7 @@ paths:
                 - sourceColumn
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -22922,7 +22853,7 @@ paths:
                 - columns
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.contentTypeCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -22960,7 +22891,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.contentType'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -23050,7 +22981,7 @@ paths:
                 - columns
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -23097,12 +23028,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.contentType'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.contentType'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -23229,7 +23156,7 @@ paths:
                 - columns
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -23365,7 +23292,7 @@ paths:
                 - columns
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.contentTypeCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -23462,7 +23389,7 @@ paths:
                 - columns
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -23549,7 +23476,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.columnLinkCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -23595,7 +23522,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.columnLink'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -23670,7 +23597,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -23725,12 +23652,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.columnLink'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.columnLink'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -23954,7 +23877,7 @@ paths:
                 - sourceColumn
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.columnDefinitionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -24060,7 +23983,7 @@ paths:
                 - sourceColumn
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -24242,7 +24165,7 @@ paths:
                 - sourceColumn
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.columnDefinitionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -24292,7 +24215,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.columnDefinition'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -24399,7 +24322,7 @@ paths:
                 - sourceColumn
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -24454,12 +24377,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.columnDefinition'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.columnDefinition'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -24611,7 +24530,7 @@ paths:
                 - sourceColumn
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -24699,7 +24618,7 @@ paths:
                 - special
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -24825,7 +24744,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.listItemCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -24867,7 +24786,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.listItem'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -24958,7 +24877,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -25005,12 +24924,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.listItem'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.listItem'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -25119,7 +25034,7 @@ paths:
                 - lastSevenDays
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -25232,7 +25147,7 @@ paths:
                 - fields
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.documentSetVersionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -25282,7 +25197,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.documentSetVersion'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -25366,7 +25281,7 @@ paths:
                 - fields
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -25421,12 +25336,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.documentSetVersion'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.documentSetVersion'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -25590,7 +25501,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -25632,7 +25543,7 @@ paths:
             type: string
           x-ms-docs-key-type: listItem
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -25744,7 +25655,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -25795,12 +25706,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.fieldValueSet'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.fieldValueSet'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -25935,7 +25842,7 @@ paths:
                 - fields
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.listItemVersionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -25981,7 +25888,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.listItemVersion'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -26060,7 +25967,7 @@ paths:
                 - fields
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -26115,12 +26022,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.listItemVersion'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.listItemVersion'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -26239,7 +26142,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -26294,12 +26197,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.fieldValueSet'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.fieldValueSet'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -26447,7 +26346,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.richLongRunningOperationCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -26485,7 +26384,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.richLongRunningOperation'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -26560,7 +26459,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -26607,12 +26506,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.richLongRunningOperation'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.richLongRunningOperation'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -26767,7 +26662,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.subscriptionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -26805,7 +26700,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.subscription'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -26885,7 +26780,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -26932,12 +26827,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.subscription'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.subscription'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -27088,7 +26979,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -27127,12 +27018,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.driveItem'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.driveItem'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -27225,7 +27112,7 @@ paths:
                 - lastSevenDays
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -27423,7 +27310,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.driveItemCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -27541,7 +27428,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -27586,7 +27473,7 @@ paths:
             type: string
           x-ms-docs-key-type: driveItem
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -27669,7 +27556,7 @@ paths:
             type: string
           x-ms-docs-key-type: drive
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -27790,7 +27677,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -27829,12 +27716,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.listItem'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.listItem'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -27927,7 +27810,7 @@ paths:
                 - lastSevenDays
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -28032,7 +27915,7 @@ paths:
                 - fields
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.documentSetVersionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -28074,7 +27957,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.documentSetVersion'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -28150,7 +28033,7 @@ paths:
                 - fields
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -28197,12 +28080,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.documentSetVersion'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.documentSetVersion'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -28350,7 +28229,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -28384,7 +28263,7 @@ paths:
             type: string
           x-ms-docs-key-type: drive
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -28480,7 +28359,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -28523,12 +28402,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.fieldValueSet'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.fieldValueSet'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -28647,7 +28522,7 @@ paths:
                 - fields
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.listItemVersionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -28685,7 +28560,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.listItemVersion'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -28756,7 +28631,7 @@ paths:
                 - fields
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -28803,12 +28678,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.listItemVersion'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.listItemVersion'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -28911,7 +28782,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -28958,12 +28829,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.fieldValueSet'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.fieldValueSet'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -29112,7 +28979,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.permissionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -29150,7 +29017,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.permission'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -29227,7 +29094,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -29274,12 +29141,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.permission'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.permission'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -29434,7 +29297,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.subscriptionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -29472,7 +29335,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.subscription'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -29552,7 +29415,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -29599,12 +29462,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.subscription'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.subscription'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -29732,7 +29591,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.thumbnailSetCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -29770,7 +29629,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.thumbnailSet'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -29840,7 +29699,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -29887,12 +29746,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.thumbnailSet'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.thumbnailSet'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -30023,7 +29878,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.driveItemVersionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -30061,7 +29916,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.driveItemVersion'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -30132,7 +29987,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -30179,12 +30034,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.driveItemVersion'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.driveItemVersion'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -30266,7 +30117,7 @@ paths:
             type: string
           x-ms-docs-key-type: driveItemVersion
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -30507,7 +30358,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.driveItemCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -30625,7 +30476,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -30667,7 +30518,7 @@ paths:
             type: string
           x-ms-docs-key-type: driveItem
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -30821,7 +30672,7 @@ paths:
                 - site
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.sharedDriveItemCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -30842,7 +30693,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.sharedDriveItem'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created entity
           content:
             application/json:
@@ -30860,7 +30711,7 @@ paths:
       externalDocs:
         description: Find more info here
         url: https://docs.microsoft.com/graph/api/shares-get?view=graph-rest-1.0
-      operationId: shares.sharedDriveItem_GetSharedDriveItem
+      operationId: shares.sharedDriveItem_GetSharedDriveItemGraphBPreId
       parameters:
         - name: sharedDriveItem-id
           in: path
@@ -30923,7 +30774,7 @@ paths:
                 - site
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved entity
           content:
             application/json:
@@ -30935,8 +30786,8 @@ paths:
     patch:
       tags:
         - shares.sharedDriveItem
-      summary: Update entity in shares
-      operationId: shares.sharedDriveItem_UpdateSharedDriveItem
+      summary: Update entity in shares by key (id)
+      operationId: shares.sharedDriveItem_UpdateSharedDriveItemGraphBPreId
       parameters:
         - name: sharedDriveItem-id
           in: path
@@ -30954,20 +30805,16 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.sharedDriveItem'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.sharedDriveItem'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
     delete:
       tags:
         - shares.sharedDriveItem
-      summary: Delete entity from shares
-      operationId: shares.sharedDriveItem_DeleteSharedDriveItem
+      summary: Delete entity from shares by key (id)
+      operationId: shares.sharedDriveItem_DeleteSharedDriveItemGraphBPreId
       parameters:
         - name: sharedDriveItem-id
           in: path
@@ -31086,7 +30933,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -31115,7 +30962,7 @@ paths:
             type: string
           x-ms-docs-key-type: sharedDriveItem
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -31332,7 +31179,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.driveItemCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -31442,7 +31289,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -31476,7 +31323,7 @@ paths:
             type: string
           x-ms-docs-key-type: driveItem
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -31593,7 +31440,7 @@ paths:
                 - subscriptions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -31624,12 +31471,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.list'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.list'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -31816,7 +31659,7 @@ paths:
                 - sourceColumn
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.columnDefinitionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -31850,7 +31693,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.columnDefinition'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -31941,7 +31784,7 @@ paths:
                 - sourceColumn
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -31980,12 +31823,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.columnDefinition'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.columnDefinition'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -32105,7 +31944,7 @@ paths:
                 - sourceColumn
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -32228,7 +32067,7 @@ paths:
                 - columns
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.contentTypeCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -32258,7 +32097,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.contentType'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -32340,7 +32179,7 @@ paths:
                 - columns
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -32379,12 +32218,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.contentType'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.contentType'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -32495,7 +32330,7 @@ paths:
                 - columns
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -32623,7 +32458,7 @@ paths:
                 - columns
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.contentTypeCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -32712,7 +32547,7 @@ paths:
                 - columns
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -32791,7 +32626,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.columnLinkCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -32829,7 +32664,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.columnLink'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -32896,7 +32731,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -32943,12 +32778,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.columnLink'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.columnLink'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -33156,7 +32987,7 @@ paths:
                 - sourceColumn
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.columnDefinitionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -33254,7 +33085,7 @@ paths:
                 - sourceColumn
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -33428,7 +33259,7 @@ paths:
                 - sourceColumn
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.columnDefinitionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -33470,7 +33301,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.columnDefinition'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -33569,7 +33400,7 @@ paths:
                 - sourceColumn
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -33616,12 +33447,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.columnDefinition'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.columnDefinition'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -33757,7 +33584,7 @@ paths:
                 - sourceColumn
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -33889,7 +33716,7 @@ paths:
             type: string
           x-ms-docs-key-type: contentType
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -34002,7 +33829,7 @@ paths:
                 type: object
         required: true
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -34043,7 +33870,7 @@ paths:
                 type: object
         required: true
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -34145,7 +33972,7 @@ paths:
                 - sealed desc
               type: string
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -34239,7 +34066,7 @@ paths:
                 - special
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -34357,7 +34184,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.listItemCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -34391,7 +34218,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.listItem'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -34474,7 +34301,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -34513,12 +34340,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.listItem'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.listItem'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -34611,7 +34434,7 @@ paths:
                 - lastSevenDays
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -34716,7 +34539,7 @@ paths:
                 - fields
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.documentSetVersionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -34758,7 +34581,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.documentSetVersion'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -34834,7 +34657,7 @@ paths:
                 - fields
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -34881,12 +34704,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.documentSetVersion'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.documentSetVersion'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -35075,7 +34894,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -35109,7 +34928,7 @@ paths:
             type: string
           x-ms-docs-key-type: listItem
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -35205,7 +35024,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -35248,12 +35067,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.fieldValueSet'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.fieldValueSet'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -35373,7 +35188,7 @@ paths:
                 - startDateTime desc
               type: string
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -35502,7 +35317,7 @@ paths:
                 - startDateTime desc
               type: string
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -35606,7 +35421,7 @@ paths:
                 - fields
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.listItemVersionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -35644,7 +35459,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.listItemVersion'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -35715,7 +35530,7 @@ paths:
                 - fields
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -35762,12 +35577,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.listItemVersion'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.listItemVersion'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -35870,7 +35681,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -35917,12 +35728,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.fieldValueSet'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.fieldValueSet'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -35968,6 +35775,47 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
+  '/shares/{sharedDriveItem-id}/list/items/{listItem-id}/versions/{listItemVersion-id}/microsoft.graph.documentSetVersion/microsoft.graph.restore':
+    post:
+      tags:
+        - shares.Actions
+      summary: Invoke action restore
+      description: Restore a document set version.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/documentsetversion-restore?view=graph-rest-1.0
+      operationId: shares.list.items.versions.AsDocumentSetVersion_restore
+      parameters:
+        - name: sharedDriveItem-id
+          in: path
+          description: 'key: id of sharedDriveItem'
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: sharedDriveItem
+        - name: listItem-id
+          in: path
+          description: 'key: id of listItem'
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: listItem
+        - name: listItemVersion-id
+          in: path
+          description: 'key: id of listItemVersion'
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: listItemVersion
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
   '/shares/{sharedDriveItem-id}/list/items/{listItem-id}/versions/{listItemVersion-id}/microsoft.graph.restoreVersion':
     post:
       tags:
@@ -36095,7 +35943,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.richLongRunningOperationCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -36125,7 +35973,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.richLongRunningOperation'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -36192,7 +36040,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -36231,12 +36079,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.richLongRunningOperation'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.richLongRunningOperation'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -36375,7 +36219,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.subscriptionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -36405,7 +36249,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.subscription'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -36477,7 +36321,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -36516,12 +36360,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.subscription'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.subscription'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -36654,7 +36494,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -36685,12 +36525,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.listItem'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.listItem'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -36767,7 +36603,7 @@ paths:
                 - lastSevenDays
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -36864,7 +36700,7 @@ paths:
                 - fields
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.documentSetVersionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -36898,7 +36734,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.documentSetVersion'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -36966,7 +36802,7 @@ paths:
                 - fields
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -37005,12 +36841,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.documentSetVersion'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.documentSetVersion'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -37175,7 +37007,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -37201,7 +37033,7 @@ paths:
             type: string
           x-ms-docs-key-type: sharedDriveItem
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -37281,7 +37113,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -37316,12 +37148,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.fieldValueSet'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.fieldValueSet'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -37425,7 +37253,7 @@ paths:
                 - startDateTime desc
               type: string
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -37546,7 +37374,7 @@ paths:
                 - startDateTime desc
               type: string
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -37642,7 +37470,7 @@ paths:
                 - fields
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.listItemVersionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -37672,7 +37500,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.listItemVersion'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -37735,7 +37563,7 @@ paths:
                 - fields
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -37774,12 +37602,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.listItemVersion'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.listItemVersion'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -37866,7 +37690,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -37905,12 +37729,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.fieldValueSet'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.fieldValueSet'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -37948,6 +37768,39 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
+  '/shares/{sharedDriveItem-id}/listItem/versions/{listItemVersion-id}/microsoft.graph.documentSetVersion/microsoft.graph.restore':
+    post:
+      tags:
+        - shares.Actions
+      summary: Invoke action restore
+      description: Restore a document set version.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/documentsetversion-restore?view=graph-rest-1.0
+      operationId: shares.listItem.versions.AsDocumentSetVersion_restore
+      parameters:
+        - name: sharedDriveItem-id
+          in: path
+          description: 'key: id of sharedDriveItem'
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: sharedDriveItem
+        - name: listItemVersion-id
+          in: path
+          description: 'key: id of listItemVersion'
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: listItemVersion
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
   '/shares/{sharedDriveItem-id}/listItem/versions/{listItemVersion-id}/microsoft.graph.restoreVersion':
     post:
       tags:
@@ -38033,7 +37886,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -38064,12 +37917,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.permission'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.permission'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -38138,7 +37987,7 @@ paths:
                 type: object
         required: true
       responses:
-        2XX:
+        '200':
           description: Success
           content:
             application/json:
@@ -38255,7 +38104,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -38281,7 +38130,7 @@ paths:
             type: string
           x-ms-docs-key-type: sharedDriveItem
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -38407,7 +38256,7 @@ paths:
                 - onenote
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -38490,7 +38339,7 @@ paths:
                 - special
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -38619,7 +38468,7 @@ paths:
                 - special
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.driveCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -38649,7 +38498,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.drive'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -38737,7 +38586,7 @@ paths:
                 - special
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -38776,12 +38625,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.drive'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.drive'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -39008,7 +38853,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.driveItemCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -39126,7 +38971,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -39171,7 +39016,7 @@ paths:
             type: string
           x-ms-docs-key-type: driveItem
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -39415,7 +39260,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.driveItemCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -39533,7 +39378,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -39578,7 +39423,7 @@ paths:
             type: string
           x-ms-docs-key-type: driveItem
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -39819,7 +39664,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.driveItemCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -39857,7 +39702,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.driveItem'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -39976,7 +39821,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -40023,12 +39868,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.driveItem'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.driveItem'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -40137,7 +39978,7 @@ paths:
                 - lastSevenDays
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -40343,7 +40184,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.driveItemCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -40469,7 +40310,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -40522,7 +40363,7 @@ paths:
             type: string
           x-ms-docs-key-type: driveItem
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -40618,7 +40459,7 @@ paths:
             type: string
           x-ms-docs-key-type: driveItem
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -40755,7 +40596,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -40802,12 +40643,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.listItem'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.listItem'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -40916,7 +40753,7 @@ paths:
                 - lastSevenDays
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -41029,7 +40866,7 @@ paths:
                 - fields
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.documentSetVersionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -41079,7 +40916,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.documentSetVersion'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -41163,7 +41000,7 @@ paths:
                 - fields
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -41218,12 +41055,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.documentSetVersion'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.documentSetVersion'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -41387,7 +41220,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -41429,7 +41262,7 @@ paths:
             type: string
           x-ms-docs-key-type: driveItem
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -41541,7 +41374,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -41592,12 +41425,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.fieldValueSet'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.fieldValueSet'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -41732,7 +41561,7 @@ paths:
                 - fields
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.listItemVersionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -41778,7 +41607,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.listItemVersion'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -41857,7 +41686,7 @@ paths:
                 - fields
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -41912,12 +41741,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.listItemVersion'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.listItemVersion'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -42036,7 +41861,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -42091,12 +41916,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.fieldValueSet'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.fieldValueSet'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -42261,7 +42082,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.permissionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -42307,7 +42128,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.permission'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -42392,7 +42213,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -42447,12 +42268,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.permission'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.permission'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -42623,7 +42440,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.subscriptionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -42669,7 +42486,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.subscription'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -42757,7 +42574,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -42812,12 +42629,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.subscription'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.subscription'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -42961,7 +42774,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.thumbnailSetCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -43007,7 +42820,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.thumbnailSet'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -43085,7 +42898,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -43140,12 +42953,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.thumbnailSet'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.thumbnailSet'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -43292,7 +43101,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.driveItemVersionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -43338,7 +43147,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.driveItemVersion'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -43417,7 +43226,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -43472,12 +43281,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.driveItemVersion'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.driveItemVersion'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -43575,7 +43380,7 @@ paths:
             type: string
           x-ms-docs-key-type: driveItemVersion
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -43716,7 +43521,7 @@ paths:
                 - subscriptions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -43755,12 +43560,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.list'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.list'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -43963,7 +43764,7 @@ paths:
                 - sourceColumn
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.columnDefinitionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -44005,7 +43806,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.columnDefinition'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -44104,7 +43905,7 @@ paths:
                 - sourceColumn
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -44151,12 +43952,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.columnDefinition'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.columnDefinition'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -44292,7 +44089,7 @@ paths:
                 - sourceColumn
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -44423,7 +44220,7 @@ paths:
                 - columns
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.contentTypeCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -44461,7 +44258,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.contentType'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -44551,7 +44348,7 @@ paths:
                 - columns
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -44598,12 +44395,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.contentType'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.contentType'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -44730,7 +44523,7 @@ paths:
                 - columns
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -44866,7 +44659,7 @@ paths:
                 - columns
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.contentTypeCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -44963,7 +44756,7 @@ paths:
                 - columns
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -45050,7 +44843,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.columnLinkCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -45096,7 +44889,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.columnLink'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -45171,7 +44964,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -45226,12 +45019,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.columnLink'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.columnLink'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -45455,7 +45244,7 @@ paths:
                 - sourceColumn
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.columnDefinitionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -45561,7 +45350,7 @@ paths:
                 - sourceColumn
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -45743,7 +45532,7 @@ paths:
                 - sourceColumn
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.columnDefinitionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -45793,7 +45582,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.columnDefinition'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -45900,7 +45689,7 @@ paths:
                 - sourceColumn
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -45955,12 +45744,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.columnDefinition'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.columnDefinition'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -46112,7 +45897,7 @@ paths:
                 - sourceColumn
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -46200,7 +45985,7 @@ paths:
                 - special
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -46326,7 +46111,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.listItemCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -46368,7 +46153,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.listItem'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -46459,7 +46244,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -46506,12 +46291,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.listItem'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.listItem'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -46620,7 +46401,7 @@ paths:
                 - lastSevenDays
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -46733,7 +46514,7 @@ paths:
                 - fields
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.documentSetVersionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -46783,7 +46564,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.documentSetVersion'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -46867,7 +46648,7 @@ paths:
                 - fields
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -46922,12 +46703,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.documentSetVersion'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.documentSetVersion'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -47091,7 +46868,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -47133,7 +46910,7 @@ paths:
             type: string
           x-ms-docs-key-type: listItem
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -47245,7 +47022,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -47296,12 +47073,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.fieldValueSet'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.fieldValueSet'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -47436,7 +47209,7 @@ paths:
                 - fields
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.listItemVersionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -47482,7 +47255,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.listItemVersion'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -47561,7 +47334,7 @@ paths:
                 - fields
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -47616,12 +47389,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.listItemVersion'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.listItemVersion'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -47740,7 +47509,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -47795,12 +47564,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.fieldValueSet'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.fieldValueSet'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -47948,7 +47713,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.richLongRunningOperationCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -47986,7 +47751,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.richLongRunningOperation'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -48061,7 +47826,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -48108,12 +47873,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.richLongRunningOperation'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.richLongRunningOperation'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -48268,7 +48029,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.subscriptionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -48306,7 +48067,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.subscription'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -48386,7 +48147,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -48433,12 +48194,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.subscription'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.subscription'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -48589,7 +48346,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -48628,12 +48385,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.driveItem'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.driveItem'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -48726,7 +48479,7 @@ paths:
                 - lastSevenDays
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -48924,7 +48677,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.driveItemCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -49042,7 +48795,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -49087,7 +48840,7 @@ paths:
             type: string
           x-ms-docs-key-type: driveItem
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -49170,7 +48923,7 @@ paths:
             type: string
           x-ms-docs-key-type: drive
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -49291,7 +49044,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -49330,12 +49083,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.listItem'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.listItem'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -49428,7 +49177,7 @@ paths:
                 - lastSevenDays
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -49533,7 +49282,7 @@ paths:
                 - fields
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.documentSetVersionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -49575,7 +49324,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.documentSetVersion'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -49651,7 +49400,7 @@ paths:
                 - fields
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -49698,12 +49447,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.documentSetVersion'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.documentSetVersion'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -49851,7 +49596,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -49885,7 +49630,7 @@ paths:
             type: string
           x-ms-docs-key-type: drive
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -49981,7 +49726,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -50024,12 +49769,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.fieldValueSet'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.fieldValueSet'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -50148,7 +49889,7 @@ paths:
                 - fields
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.listItemVersionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -50186,7 +49927,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.listItemVersion'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -50257,7 +49998,7 @@ paths:
                 - fields
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -50304,12 +50045,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.listItemVersion'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.listItemVersion'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -50412,7 +50149,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -50459,12 +50196,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.fieldValueSet'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.fieldValueSet'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -50613,7 +50346,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.permissionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -50651,7 +50384,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.permission'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -50728,7 +50461,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -50775,12 +50508,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.permission'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.permission'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -50935,7 +50664,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.subscriptionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -50973,7 +50702,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.subscription'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -51053,7 +50782,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -51100,12 +50829,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.subscription'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.subscription'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -51233,7 +50958,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.thumbnailSetCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -51271,7 +50996,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.thumbnailSet'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -51341,7 +51066,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -51388,12 +51113,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.thumbnailSet'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.thumbnailSet'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -51524,7 +51245,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.driveItemVersionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -51562,7 +51283,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.driveItemVersion'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -51633,7 +51354,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -51680,12 +51401,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.driveItemVersion'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.driveItemVersion'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -51767,7 +51484,7 @@ paths:
             type: string
           x-ms-docs-key-type: driveItemVersion
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -52008,7 +51725,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.driveItemCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -52126,7 +51843,7 @@ paths:
                 - versions
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -52168,7 +51885,7 @@ paths:
             type: string
           x-ms-docs-key-type: driveItem
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -52718,11 +52435,11 @@ components:
               nullable: true
             lifecycleNotificationUrl:
               type: string
-              description: 'Optional. The URL of the endpoint that receives lifecycle notifications, including subscriptionRemoved and missed notifications. This URL must make use of the HTTPS protocol.'
+              description: 'Optional. The URL of the endpoint that receives lifecycle notifications, including subscriptionRemoved, reauthorizationRequired, and missed notifications. This URL must make use of the HTTPS protocol.'
               nullable: true
             notificationQueryOptions:
               type: string
-              description: 'Optional. OData query options for specifying value for the targeting resource. Clients receive notifications when resource reaches the state matching the query options provided here. With this new property in the subscription creation payload along with all existing properties, Webhooks will deliver notifications whenever a resource reaches the desired state mentioned in the notificationQueryOptions property. For example, when the print job is completed or when a print job resource isFetchable property value becomes true etc.'
+              description: 'Optional. OData query options for specifying value for the targeting resource. Clients receive notifications when resource reaches the state matching the query options provided here. With this new property in the subscription creation payload along with all existing properties, Webhooks will deliver notifications whenever a resource reaches the desired state mentioned in the notificationQueryOptions property. For example, when the print job is completed or when a print job resource isFetchable property value becomes true etc.  Supported only for Universal Print Service. For more information, see Subscribe to change notifications from cloud printing APIs using Microsoft Graph.'
               nullable: true
             notificationUrl:
               type: string
@@ -62279,13 +61996,13 @@ components:
       properties:
         containerId:
           type: string
-          description: The identifier of the resource that contains the plan.
+          description: The identifier of the resource that contains the plan. Optional.
           nullable: true
         type:
           $ref: '#/components/schemas/microsoft.graph.plannerContainerType'
         url:
           type: string
-          description: The full canonical URL of the container.
+          description: The full canonical URL of the container. Optional.
           nullable: true
       additionalProperties:
         type: object

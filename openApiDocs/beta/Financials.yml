@@ -39,7 +39,7 @@ paths:
                 - companies
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved entity
           content:
             application/json:
@@ -61,12 +61,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.financials'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.financials'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -202,7 +198,7 @@ paths:
                 - vendors
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.companyCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -324,7 +320,7 @@ paths:
                 - vendors
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -409,7 +405,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.accountCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -471,7 +467,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -568,7 +564,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.agedAccountsPayableCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -634,7 +630,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -731,7 +727,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.agedAccountsReceivableCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -797,7 +793,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -900,7 +896,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.companyInformationCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -968,7 +964,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -1007,12 +1003,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.companyInformation'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.companyInformation'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -1040,7 +1032,7 @@ paths:
             type: string
           x-ms-docs-key-type: companyInformation
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -1156,7 +1148,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.countryRegionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -1186,7 +1178,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.countryRegion'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -1247,7 +1239,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -1286,12 +1278,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.countryRegion'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.countryRegion'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -1405,7 +1393,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.currencyCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -1435,7 +1423,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.currency'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -1498,7 +1486,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -1537,12 +1525,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.currency'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.currency'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -1657,7 +1641,7 @@ paths:
                 - customerPayments
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.customerPaymentJournalCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -1687,7 +1671,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.customerPaymentJournal'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -1753,7 +1737,7 @@ paths:
                 - customerPayments
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -1792,12 +1776,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.customerPaymentJournal'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.customerPaymentJournal'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -1889,7 +1869,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -2008,7 +1988,7 @@ paths:
                 - customer
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.customerPaymentCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -2046,7 +2026,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.customerPayment'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -2127,7 +2107,7 @@ paths:
                 - customer
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -2174,12 +2154,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.customerPayment'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.customerPayment'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -2309,7 +2285,7 @@ paths:
                 - shipmentMethod
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -2356,12 +2332,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.customer'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.customer'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -2469,7 +2441,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -2516,12 +2488,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.currency'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.currency'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -2626,7 +2594,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -2673,12 +2641,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.paymentMethod'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.paymentMethod'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -2787,7 +2751,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -2834,12 +2798,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.paymentTerm'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.paymentTerm'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -2971,7 +2931,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.pictureCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -3017,7 +2977,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.picture'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -3094,7 +3054,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -3149,12 +3109,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.picture'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.picture'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -3248,7 +3204,7 @@ paths:
             type: string
           x-ms-docs-key-type: picture
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -3369,7 +3325,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -3416,12 +3372,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.shipmentMethod'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.shipmentMethod'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -3569,7 +3521,7 @@ paths:
                 - customer
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.customerPaymentCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -3599,7 +3551,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.customerPayment'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -3672,7 +3624,7 @@ paths:
                 - customer
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -3711,12 +3663,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.customerPayment'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.customerPayment'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -3830,7 +3778,7 @@ paths:
                 - shipmentMethod
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -3869,12 +3817,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.customer'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.customer'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -3966,7 +3910,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -4005,12 +3949,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.currency'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.currency'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -4099,7 +4039,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -4138,12 +4078,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.paymentMethod'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.paymentMethod'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -4236,7 +4172,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -4275,12 +4211,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.paymentTerm'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.paymentTerm'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -4396,7 +4328,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.pictureCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -4434,7 +4366,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.picture'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -4503,7 +4435,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -4550,12 +4482,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.picture'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.picture'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -4633,7 +4561,7 @@ paths:
             type: string
           x-ms-docs-key-type: picture
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -4738,7 +4666,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -4777,12 +4705,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.shipmentMethod'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.shipmentMethod'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -4942,7 +4866,7 @@ paths:
                 - shipmentMethod
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.customerCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -4972,7 +4896,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.customer'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -5057,7 +4981,7 @@ paths:
                 - shipmentMethod
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -5096,12 +5020,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.customer'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.customer'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -5193,7 +5113,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -5232,12 +5152,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.currency'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.currency'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -5326,7 +5242,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -5365,12 +5281,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.paymentMethod'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.paymentMethod'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -5463,7 +5375,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -5502,12 +5414,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.paymentTerm'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.paymentTerm'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -5623,7 +5531,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.pictureCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -5661,7 +5569,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.picture'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -5730,7 +5638,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -5777,12 +5685,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.picture'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.picture'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -5860,7 +5764,7 @@ paths:
             type: string
           x-ms-docs-key-type: picture
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -5965,7 +5869,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -6004,12 +5908,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.shipmentMethod'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.shipmentMethod'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -6116,7 +6016,7 @@ paths:
                 - dimensionValues
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.dimensionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -6177,7 +6077,7 @@ paths:
                 - dimensionValues
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -6261,7 +6161,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.dimensionValueCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -6328,7 +6228,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -6404,7 +6304,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.dimensionValueCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -6463,7 +6363,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -6583,7 +6483,7 @@ paths:
                 - picture
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.employeeCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -6613,7 +6513,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.employee'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -6689,7 +6589,7 @@ paths:
                 - picture
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -6728,12 +6628,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.employee'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.employee'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -6849,7 +6745,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.pictureCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -6887,7 +6783,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.picture'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -6956,7 +6852,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -7003,12 +6899,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.picture'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.picture'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -7086,7 +6978,7 @@ paths:
             type: string
           x-ms-docs-key-type: picture
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -7227,7 +7119,7 @@ paths:
                 - account
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.generalLedgerEntryCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -7294,7 +7186,7 @@ paths:
                 - account
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -7357,7 +7249,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -7433,7 +7325,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.itemCategoryCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -7463,7 +7355,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.itemCategory'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -7523,7 +7415,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -7562,12 +7454,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.itemCategory'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.itemCategory'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -7712,7 +7600,7 @@ paths:
                 - picture
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.itemCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -7742,7 +7630,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.item'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -7818,7 +7706,7 @@ paths:
                 - picture
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -7857,12 +7745,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.item'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.item'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -7951,7 +7835,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -7990,12 +7874,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.itemCategory'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.itemCategory'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -8111,7 +7991,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.pictureCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -8149,7 +8029,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.picture'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -8218,7 +8098,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -8265,12 +8145,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.picture'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.picture'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -8348,7 +8224,7 @@ paths:
             type: string
           x-ms-docs-key-type: picture
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -8495,7 +8371,7 @@ paths:
                 - account
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.journalLineCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -8525,7 +8401,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.journalLine'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -8595,7 +8471,7 @@ paths:
                 - account
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -8634,12 +8510,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.journalLine'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.journalLine'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -8731,7 +8603,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -8817,7 +8689,7 @@ paths:
                 - journalLines
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.journalCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -8847,7 +8719,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.journal'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -8913,7 +8785,7 @@ paths:
                 - journalLines
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -8952,12 +8824,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.journal'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.journal'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -9049,7 +8917,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -9159,7 +9027,7 @@ paths:
                 - account
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.journalLineCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -9197,7 +9065,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.journalLine'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -9275,7 +9143,7 @@ paths:
                 - account
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -9322,12 +9190,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.journalLine'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.journalLine'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -9435,7 +9299,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -9540,7 +9404,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.paymentMethodCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -9570,7 +9434,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.paymentMethod'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -9630,7 +9494,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -9669,12 +9533,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.paymentMethod'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.paymentMethod'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -9791,7 +9651,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.paymentTermCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -9821,7 +9681,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.paymentTerm'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -9885,7 +9745,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -9924,12 +9784,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.paymentTerm'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.paymentTerm'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -10037,7 +9893,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.pictureCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -10067,7 +9923,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.picture'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -10128,7 +9984,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -10167,12 +10023,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.picture'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.picture'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -10234,7 +10086,7 @@ paths:
             type: string
           x-ms-docs-key-type: picture
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -10405,7 +10257,7 @@ paths:
                 - item
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.purchaseInvoiceLineCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -10486,7 +10338,7 @@ paths:
                 - item
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -10525,12 +10377,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.purchaseInvoiceLine'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.purchaseInvoiceLine'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -10588,7 +10436,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -10664,7 +10512,7 @@ paths:
                 - picture
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -10703,12 +10551,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.item'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.item'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -10797,7 +10641,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -10836,12 +10680,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.itemCategory'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.itemCategory'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -10957,7 +10797,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.pictureCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -10995,7 +10835,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.picture'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -11064,7 +10904,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -11111,12 +10951,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.picture'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.picture'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -11194,7 +11030,7 @@ paths:
             type: string
           x-ms-docs-key-type: picture
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -11390,7 +11226,7 @@ paths:
                 - vendor
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.purchaseInvoiceCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -11478,7 +11314,7 @@ paths:
                 - vendor
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -11517,12 +11353,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.purchaseInvoice'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.purchaseInvoice'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -11580,7 +11412,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -11619,12 +11451,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.currency'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.currency'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -11824,7 +11652,7 @@ paths:
                 - item
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.purchaseInvoiceLineCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -11913,7 +11741,7 @@ paths:
                 - item
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -11960,12 +11788,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.purchaseInvoiceLine'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.purchaseInvoiceLine'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -12031,7 +11855,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -12115,7 +11939,7 @@ paths:
                 - picture
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -12162,12 +11986,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.item'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.item'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -12272,7 +12092,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -12319,12 +12139,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.itemCategory'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.itemCategory'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -12456,7 +12272,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.pictureCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -12502,7 +12318,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.picture'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -12579,7 +12395,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -12634,12 +12450,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.picture'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.picture'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -12733,7 +12545,7 @@ paths:
             type: string
           x-ms-docs-key-type: picture
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -12866,7 +12678,7 @@ paths:
                 - picture
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -12905,12 +12717,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.vendor'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.vendor'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -13002,7 +12810,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -13041,12 +12849,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.currency'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.currency'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -13135,7 +12939,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -13174,12 +12978,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.paymentMethod'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.paymentMethod'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -13272,7 +13072,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -13311,12 +13111,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.paymentTerm'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.paymentTerm'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -13432,7 +13228,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.pictureCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -13470,7 +13266,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.picture'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -13539,7 +13335,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -13586,12 +13382,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.picture'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.picture'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -13669,7 +13461,7 @@ paths:
             type: string
           x-ms-docs-key-type: picture
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -13851,7 +13643,7 @@ paths:
                 - item
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.salesCreditMemoLineCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -13933,7 +13725,7 @@ paths:
                 - item
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -13972,12 +13764,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.salesCreditMemoLine'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.salesCreditMemoLine'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -14035,7 +13823,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -14111,7 +13899,7 @@ paths:
                 - picture
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -14150,12 +13938,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.item'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.item'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -14244,7 +14028,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -14283,12 +14067,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.itemCategory'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.itemCategory'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -14404,7 +14184,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.pictureCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -14442,7 +14222,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.picture'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -14511,7 +14291,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -14558,12 +14338,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.picture'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.picture'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -14641,7 +14417,7 @@ paths:
             type: string
           x-ms-docs-key-type: picture
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -14845,7 +14621,7 @@ paths:
                 - salesCreditMemoLines
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.salesCreditMemoCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -14937,7 +14713,7 @@ paths:
                 - salesCreditMemoLines
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -14976,12 +14752,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.salesCreditMemo'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.salesCreditMemo'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -15039,7 +14811,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -15078,12 +14850,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.currency'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.currency'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -15197,7 +14965,7 @@ paths:
                 - shipmentMethod
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -15236,12 +15004,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.customer'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.customer'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -15333,7 +15097,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -15372,12 +15136,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.currency'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.currency'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -15466,7 +15226,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -15505,12 +15265,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.paymentMethod'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.paymentMethod'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -15603,7 +15359,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -15642,12 +15398,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.paymentTerm'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.paymentTerm'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -15763,7 +15515,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.pictureCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -15801,7 +15553,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.picture'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -15870,7 +15622,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -15917,12 +15669,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.picture'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.picture'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -16000,7 +15748,7 @@ paths:
             type: string
           x-ms-docs-key-type: picture
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -16105,7 +15853,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -16144,12 +15892,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.shipmentMethod'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.shipmentMethod'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -16242,7 +15986,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -16281,12 +16025,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.paymentTerm'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.paymentTerm'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -16460,7 +16200,7 @@ paths:
                 - item
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.salesCreditMemoLineCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -16550,7 +16290,7 @@ paths:
                 - item
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -16597,12 +16337,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.salesCreditMemoLine'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.salesCreditMemoLine'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -16668,7 +16404,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -16752,7 +16488,7 @@ paths:
                 - picture
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -16799,12 +16535,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.item'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.item'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -16909,7 +16641,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -16956,12 +16688,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.itemCategory'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.itemCategory'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -17093,7 +16821,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.pictureCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -17139,7 +16867,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.picture'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -17216,7 +16944,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -17271,12 +16999,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.picture'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.picture'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -17370,7 +17094,7 @@ paths:
             type: string
           x-ms-docs-key-type: picture
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -17560,7 +17284,7 @@ paths:
                 - item
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.salesInvoiceLineCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -17642,7 +17366,7 @@ paths:
                 - item
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -17681,12 +17405,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.salesInvoiceLine'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.salesInvoiceLine'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -17744,7 +17464,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -17820,7 +17540,7 @@ paths:
                 - picture
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -17859,12 +17579,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.item'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.item'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -17953,7 +17669,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -17992,12 +17708,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.itemCategory'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.itemCategory'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -18113,7 +17825,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.pictureCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -18151,7 +17863,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.picture'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -18220,7 +17932,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -18267,12 +17979,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.picture'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.picture'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -18350,7 +18058,7 @@ paths:
             type: string
           x-ms-docs-key-type: picture
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -18571,7 +18279,7 @@ paths:
                 - shipmentMethod
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.salesInvoiceCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -18670,7 +18378,7 @@ paths:
                 - shipmentMethod
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -18709,12 +18417,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.salesInvoice'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.salesInvoice'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -18772,7 +18476,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -18811,12 +18515,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.currency'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.currency'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -18930,7 +18630,7 @@ paths:
                 - shipmentMethod
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -18969,12 +18669,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.customer'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.customer'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -19066,7 +18762,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -19105,12 +18801,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.currency'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.currency'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -19199,7 +18891,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -19238,12 +18930,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.paymentMethod'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.paymentMethod'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -19336,7 +19024,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -19375,12 +19063,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.paymentTerm'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.paymentTerm'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -19496,7 +19180,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.pictureCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -19534,7 +19218,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.picture'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -19603,7 +19287,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -19650,12 +19334,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.picture'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.picture'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -19733,7 +19413,7 @@ paths:
             type: string
           x-ms-docs-key-type: picture
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -19838,7 +19518,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -19877,12 +19557,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.shipmentMethod'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.shipmentMethod'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -20120,7 +19796,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -20159,12 +19835,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.paymentTerm'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.paymentTerm'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -20338,7 +20010,7 @@ paths:
                 - item
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.salesInvoiceLineCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -20428,7 +20100,7 @@ paths:
                 - item
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -20475,12 +20147,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.salesInvoiceLine'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.salesInvoiceLine'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -20546,7 +20214,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -20630,7 +20298,7 @@ paths:
                 - picture
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -20677,12 +20345,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.item'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.item'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -20787,7 +20451,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -20834,12 +20498,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.itemCategory'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.itemCategory'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -20971,7 +20631,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.pictureCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -21017,7 +20677,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.picture'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -21094,7 +20754,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -21149,12 +20809,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.picture'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.picture'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -21248,7 +20904,7 @@ paths:
             type: string
           x-ms-docs-key-type: picture
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -21361,7 +21017,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -21400,12 +21056,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.shipmentMethod'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.shipmentMethod'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -21583,7 +21235,7 @@ paths:
                 - item
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.salesOrderLineCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -21669,7 +21321,7 @@ paths:
                 - item
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -21708,12 +21360,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.salesOrderLine'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.salesOrderLine'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -21771,7 +21419,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -21847,7 +21495,7 @@ paths:
                 - picture
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -21886,12 +21534,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.item'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.item'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -21980,7 +21624,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -22019,12 +21663,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.itemCategory'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.itemCategory'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -22140,7 +21780,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.pictureCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -22178,7 +21818,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.picture'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -22247,7 +21887,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -22294,12 +21934,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.picture'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.picture'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -22377,7 +22013,7 @@ paths:
             type: string
           x-ms-docs-key-type: picture
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -22590,7 +22226,7 @@ paths:
                 - salesOrderLines
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.salesOrderCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -22685,7 +22321,7 @@ paths:
                 - salesOrderLines
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -22724,12 +22360,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.salesOrder'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.salesOrder'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -22787,7 +22419,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -22826,12 +22458,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.currency'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.currency'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -22945,7 +22573,7 @@ paths:
                 - shipmentMethod
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -22984,12 +22612,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.customer'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.customer'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -23081,7 +22705,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -23120,12 +22744,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.currency'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.currency'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -23214,7 +22834,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -23253,12 +22873,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.paymentMethod'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.paymentMethod'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -23351,7 +22967,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -23390,12 +23006,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.paymentTerm'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.paymentTerm'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -23511,7 +23123,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.pictureCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -23549,7 +23161,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.picture'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -23618,7 +23230,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -23665,12 +23277,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.picture'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.picture'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -23748,7 +23356,7 @@ paths:
             type: string
           x-ms-docs-key-type: picture
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -23853,7 +23461,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -23892,12 +23500,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.shipmentMethod'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.shipmentMethod'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -23990,7 +23594,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -24029,12 +23633,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.paymentTerm'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.paymentTerm'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -24220,7 +23820,7 @@ paths:
                 - item
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.salesOrderLineCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -24314,7 +23914,7 @@ paths:
                 - item
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -24361,12 +23961,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.salesOrderLine'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.salesOrderLine'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -24432,7 +24028,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -24516,7 +24112,7 @@ paths:
                 - picture
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -24563,12 +24159,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.item'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.item'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -24673,7 +24265,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -24720,12 +24312,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.itemCategory'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.itemCategory'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -24857,7 +24445,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.pictureCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -24903,7 +24491,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.picture'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -24980,7 +24568,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -25035,12 +24623,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.picture'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.picture'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -25134,7 +24718,7 @@ paths:
             type: string
           x-ms-docs-key-type: picture
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -25318,7 +24902,7 @@ paths:
                 - item
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.salesQuoteLineCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -25398,7 +24982,7 @@ paths:
                 - item
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -25437,12 +25021,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.salesQuoteLine'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.salesQuoteLine'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -25500,7 +25080,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -25576,7 +25156,7 @@ paths:
                 - picture
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -25615,12 +25195,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.item'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.item'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -25709,7 +25285,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -25748,12 +25324,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.itemCategory'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.itemCategory'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -25869,7 +25441,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.pictureCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -25907,7 +25479,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.picture'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -25976,7 +25548,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -26023,12 +25595,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.picture'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.picture'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -26106,7 +25674,7 @@ paths:
             type: string
           x-ms-docs-key-type: picture
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -26321,7 +25889,7 @@ paths:
                 - shipmentMethod
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.salesQuoteCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -26418,7 +25986,7 @@ paths:
                 - shipmentMethod
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -26457,12 +26025,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.salesQuote'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.salesQuote'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -26520,7 +26084,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -26559,12 +26123,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.currency'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.currency'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -26678,7 +26238,7 @@ paths:
                 - shipmentMethod
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -26717,12 +26277,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.customer'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.customer'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -26814,7 +26370,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -26853,12 +26409,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.currency'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.currency'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -26947,7 +26499,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -26986,12 +26538,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.paymentMethod'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.paymentMethod'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -27084,7 +26632,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -27123,12 +26671,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.paymentTerm'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.paymentTerm'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -27244,7 +26788,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.pictureCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -27282,7 +26826,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.picture'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -27351,7 +26895,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -27398,12 +26942,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.picture'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.picture'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -27481,7 +27021,7 @@ paths:
             type: string
           x-ms-docs-key-type: picture
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -27586,7 +27126,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -27625,12 +27165,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.shipmentMethod'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.shipmentMethod'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -27781,7 +27317,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -27820,12 +27356,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.paymentTerm'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.paymentTerm'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -27993,7 +27525,7 @@ paths:
                 - item
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.salesQuoteLineCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -28081,7 +27613,7 @@ paths:
                 - item
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -28128,12 +27660,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.salesQuoteLine'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.salesQuoteLine'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -28199,7 +27727,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -28283,7 +27811,7 @@ paths:
                 - picture
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -28330,12 +27858,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.item'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.item'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -28440,7 +27964,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -28487,12 +28011,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.itemCategory'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.itemCategory'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -28624,7 +28144,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.pictureCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -28670,7 +28190,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.picture'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -28747,7 +28267,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -28802,12 +28322,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.picture'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.picture'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -28901,7 +28417,7 @@ paths:
             type: string
           x-ms-docs-key-type: picture
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
@@ -29014,7 +28530,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -29053,12 +28569,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.shipmentMethod'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.shipmentMethod'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -29163,7 +28675,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.shipmentMethodCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -29193,7 +28705,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.shipmentMethod'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -29253,7 +28765,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -29292,12 +28804,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.shipmentMethod'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.shipmentMethod'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -29405,7 +28913,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.taxAreaCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -29435,7 +28943,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.taxArea'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -29496,7 +29004,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -29535,12 +29043,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.taxArea'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.taxArea'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -29648,7 +29152,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.taxGroupCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -29678,7 +29182,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.taxGroup'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -29739,7 +29243,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -29778,12 +29282,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.taxGroup'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.taxGroup'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -29891,7 +29391,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.unitOfMeasureCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -29921,7 +29421,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.unitOfMeasure'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -29982,7 +29482,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -30021,12 +29521,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.unitOfMeasure'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.unitOfMeasure'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -30175,7 +29671,7 @@ paths:
                 - picture
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.vendorCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -30205,7 +29701,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.vendor'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -30285,7 +29781,7 @@ paths:
                 - picture
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -30324,12 +29820,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.vendor'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.vendor'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -30421,7 +29913,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -30460,12 +29952,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.currency'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.currency'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -30554,7 +30042,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -30593,12 +30081,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.paymentMethod'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.paymentMethod'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -30691,7 +30175,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -30730,12 +30214,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.paymentTerm'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.paymentTerm'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -30851,7 +30331,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           $ref: '#/components/responses/microsoft.graph.pictureCollectionResponse'
         default:
           $ref: '#/components/responses/error'
@@ -30889,7 +30369,7 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.picture'
         required: true
       responses:
-        2XX:
+        '201':
           description: Created navigation property.
           content:
             application/json:
@@ -30958,7 +30438,7 @@ paths:
                 - '*'
               type: string
       responses:
-        2XX:
+        '200':
           description: Retrieved navigation property
           content:
             application/json:
@@ -31005,12 +30485,8 @@ paths:
               $ref: '#/components/schemas/microsoft.graph.picture'
         required: true
       responses:
-        2XX:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.picture'
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -31088,7 +30564,7 @@ paths:
             type: string
           x-ms-docs-key-type: picture
       responses:
-        2XX:
+        '200':
           description: Retrieved media content
           content:
             application/octet-stream:
