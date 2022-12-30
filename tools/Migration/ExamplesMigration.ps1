@@ -125,5 +125,5 @@ function update-ImportCommand {
 } 
 
 Write-Host -ForegroundColor Green "-------------Fetching docs and examples from dev-------------"
-Start-Copy -Module "Users.Actions"
+Start-Copy -Module "Users.Functions"
 Write-Host -ForegroundColor Green "-------------Done-------------"
