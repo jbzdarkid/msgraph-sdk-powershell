@@ -21,7 +21,9 @@ function Start-Copy {
         $GraphProfile = $_
         Get-FilesByProfile -GraphProfile $GraphProfile -ModulesToGenerate $ModulesToGenerate -Module $Module
     }
-   
+    git add .
+    git commit -m "Migrating $Module example files"
+    Write-Host -ForegroundColor Green "-------------Finished commit-------------"
 }
 
 
@@ -121,6 +123,4 @@ function update-ImportCommand {
 
 Write-Host -ForegroundColor Green "-------------Fetching docs and examples from dev-------------"
 Start-Copy -Module "Users.Functions"
-git add .
-git commit -m "Migrating Users.Functions example files"
 Write-Host -ForegroundColor Green "-------------Done-------------"
